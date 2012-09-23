@@ -6,7 +6,7 @@ gem 'rails', '3.2.8'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
-
+gem 'rails-boilerplate'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -21,6 +21,20 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'guard-rspec'
+  gem 'capybara'
+  gem 'factory_girl_rails'
+  gem 'cucumber-rails', :require => false
+  gem 'database_cleaner'
+  # gem 'launchy', '2.1.0'
+  # gem 'rb-fsevent', :require => false
+  # gem 'growl', '1.0.3'
+  gem 'guard-spork'  
+  gem 'spork'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
